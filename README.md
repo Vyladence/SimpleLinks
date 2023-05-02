@@ -22,6 +22,8 @@ At this time, SimpleLinks does not support gradients natively, however it is pos
 
 Once you have made your changes to the config, run `/simplelinks reload` to reload it.
 
+If your config file breaks for whatever reason, you can just delete it and run `/simplelinks reload` to create a fresh one.
+
 <details>
 <summary>Example Configurations</summary>
 
@@ -51,6 +53,13 @@ Once you have made your changes to the config, run `/simplelinks reload` to relo
     - "#da1b89&mThis message uses HEX coloring and YAML formatting"
   ```
 <img src="https://raw.githubusercontent.com/Vyladence/Resources/main/SimpleLinks_Example_2.png">
+
+#### Example 3
+  ```
+  lines:
+    - "&#8500fbH&#8e00f2e&#9600ear&#9f00e1e &#a800d8i&#b100d0s &#b900c7a &#c200bfg&#cb00b6r&#d300ada&#dc00a5d&#e5009ci&#ee0093e&#f6008bn&#ff0082t"
+  ```
+<img src="https://raw.githubusercontent.com/Vyladence/Resources/main/SimpleLinks_Example_3.png">
 </details>
 
 # Editing Code & Building from Source
