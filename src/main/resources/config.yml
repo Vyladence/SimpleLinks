@@ -1,7 +1,3 @@
-# To add responses to the command, add lines here.
-# YAML Color codes are supported using the & symbol
-# HEX Color codes are supported using the &# and # symbols
-
 lines:
   - "&aThank you for installing &dSimpleLinks!"
   - "To add links, modify the config.yml in the plugin folder."
