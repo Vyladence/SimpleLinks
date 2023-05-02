@@ -1,0 +1,13 @@
+# To add responses to the command, add lines here.
+# YAML Color codes are supported using the & symbol
+# HEX Color codes are supported using the &# and # symbols
+
+lines:
+  - "&aThank you for installing &SimpleLinks!"
+  - "To add links, modify the config.yml in the plugin folder."
+  - "You can use &cYAML &rcolor and &lformat &rcodes to change the style of your text"
+  - "You can also use &aHEX Codes &rstarting with &#ff0735&# &ror &#ff0735#"
+  - "Gradients are possible using online generators such as &9&nhttps://minecraft.menu/minecraft-rgb-generator"
+  - "To reload your config, use /simplelinks reload."
+  - "You need the simplelinks.admin permission to use /simplelinks and its subcommands"
+  - "To use /links, you need simplelinks.use"
