@@ -6,8 +6,8 @@ SimpleLinks is, as the name implies, a simple plugin to add links to your server
 
 SimpleLinks, being *simple*, adds minimal commands to your server.
 
-`/links` (`simplelinks.use`) - Displays links as configured
-`/simplelinks` (`simplelinks.admin`) - Displays plugin information
+`/links` (`simplelinks.use`) - Displays links as configured <br/>
+`/simplelinks` (`simplelinks.admin`) - Displays plugin information <br/>
 `/simplelinks reload` (`simplelinks.admin`) - Reloads the plugin's config
 
 # Configuration
