@@ -90,7 +90,7 @@ After that, we need to configure Gradle. This is just as easy. First, open the *
 
 <img src="https://raw.githubusercontent.com/Vyladence/Resources/main/SimpleLinks_Edit_Configuration.png">
 
-In the window that appears, click on the plus sign towards the top-right, then select *Gradle*.
+In the window that appears, click on the plus sign towards the top-left, then select *Gradle*.
 
 <img src="https://raw.githubusercontent.com/Vyladence/Resources/main/SimpleLinks_Configure_Gradle.png">
 
