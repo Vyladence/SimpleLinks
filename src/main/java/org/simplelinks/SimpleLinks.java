@@ -3,8 +3,7 @@ package org.simplelinks;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import org.simplelinks.commands.CommandLinks;
-import org.simplelinks.commands.ReloadConfig;
+import org.simplelinks.commands.*;
 
 import java.util.Objects;
 
@@ -18,7 +17,7 @@ public class SimpleLinks extends JavaPlugin {
         config.options().copyDefaults(true);
         saveConfig();
 
-        Objects.requireNonNull(this.getCommand("links")).setExecutor(new CommandLinks());
+        Objects.requireNonNull(this.getCommand("links")).setExecutor(new LinksCommand());
         Objects.requireNonNull(this.getCommand("simplelinks")).setExecutor(new ReloadConfig());
     }
 
