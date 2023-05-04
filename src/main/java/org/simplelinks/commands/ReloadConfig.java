@@ -2,9 +2,9 @@ package org.simplelinks.commands;
 
 import org.simplelinks.SimpleLinks;
 
-import org.bukkit.ChatColor;
 import org.bukkit.command.*;
 import org.bukkit.entity.Player;
+import org.simplelinks.util.ChatFormat;
 
 public class ReloadConfig implements CommandExecutor {
     @Override
@@ -16,31 +16,28 @@ public class ReloadConfig implements CommandExecutor {
                 SimpleLinks.getPlugin(SimpleLinks.class).saveDefaultConfig();
                 SimpleLinks.getPlugin(SimpleLinks.class).reloadConfig();
 
-                if (!(sender instanceof Player player)) {
-                    System.out.println("Config Reloaded!");
+                if (sender instanceof Player player) {
+                    player.sendMessage(ChatFormat.format("&8[&dSimpleLinks&8] &fConfig Reloaded!"));
                 } else {
-                    String sendThis = ChatColor.translateAlternateColorCodes('&', "&8[&dSimpleLinks&8] &fConfig Reloaded!");
-                    player.sendMessage(sendThis);
+                    System.out.println("Config Reloaded!");
                 }
             } else {
                 // Unknown Command fallback
 
-                if (!(sender instanceof Player player)) {
-                    System.out.println("Unknown Subcommand!");
+                if (sender instanceof Player player) {
+                    player.sendMessage(ChatFormat.format("&8[&dSimpleLinks&8] &cUnknown subcommand!"));
                 } else {
-                    String sendThis = ChatColor.translateAlternateColorCodes('&', "&8[&dSimpleLinks&8] &cUnknown subcommand!");
-                    player.sendMessage(sendThis);
+                    System.out.println("Unknown Subcommand!");
                 }
             }
         } else {
             // Base command
             String version = SimpleLinks.getPlugin(SimpleLinks.class).getDescription().getVersion();
 
-            if (!(sender instanceof Player player)) {
-                System.out.println("Running SimpleLinks v" + version);
+            if (sender instanceof Player player) {
+                player.sendMessage(ChatFormat.format("&8[&dSimpleLinks&8] &fRunning &fLinksPlugin &av" + version));
             } else {
-                String sendThis = ChatColor.translateAlternateColorCodes('&', "&8[&dSimpleLinks&8] &fRunning &fLinksPlugin &av" + version);
-                player.sendMessage(sendThis);
+                System.out.println("Running SimpleLinks v" + version);
             }
         }
         return true;
