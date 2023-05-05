@@ -4,7 +4,7 @@ import org.simplelinks.SimpleLinks;
 import org.bukkit.command.*;
 import org.bukkit.entity.Player;
 
-import org.simplelinks.util.ChatFormat;
+import org.simplelinks.util.PlayerSend;
 
 public class LinksCommand implements CommandExecutor {
 
@@ -14,7 +14,7 @@ public class LinksCommand implements CommandExecutor {
 
         if (sender instanceof Player player) {
             for (String line : lines) {
-                player.sendMessage(ChatFormat.format(line));
+                PlayerSend.message(player, line);
             }
         } else {
             System.out.println("This command can only run in-game!");

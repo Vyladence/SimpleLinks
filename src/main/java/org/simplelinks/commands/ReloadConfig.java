@@ -4,7 +4,7 @@ import org.simplelinks.SimpleLinks;
 
 import org.bukkit.command.*;
 import org.bukkit.entity.Player;
-import org.simplelinks.util.ChatFormat;
+import org.simplelinks.util.PlayerSend;
 
 public class ReloadConfig implements CommandExecutor {
     @Override
@@ -17,7 +17,7 @@ public class ReloadConfig implements CommandExecutor {
                 SimpleLinks.getPlugin(SimpleLinks.class).reloadConfig();
 
                 if (sender instanceof Player player) {
-                    player.sendMessage(ChatFormat.format("&8[&dSimpleLinks&8] &fConfig Reloaded!"));
+                    PlayerSend.message(player, "&8[&dSimpleLinks&8] &fConfig Reloaded!");
                 } else {
                     System.out.println("Config Reloaded!");
                 }
@@ -25,7 +25,7 @@ public class ReloadConfig implements CommandExecutor {
                 // Unknown Command fallback
 
                 if (sender instanceof Player player) {
-                    player.sendMessage(ChatFormat.format("&8[&dSimpleLinks&8] &cUnknown subcommand!"));
+                    PlayerSend.message(player, "&8[&dSimpleLinks&8] &cUnknown subcommand!");
                 } else {
                     System.out.println("Unknown Subcommand!");
                 }
@@ -35,7 +35,7 @@ public class ReloadConfig implements CommandExecutor {
             String version = SimpleLinks.getPlugin(SimpleLinks.class).getDescription().getVersion();
 
             if (sender instanceof Player player) {
-                player.sendMessage(ChatFormat.format("&8[&dSimpleLinks&8] &fRunning &fLinksPlugin &av" + version));
+                PlayerSend.message(player, "&8[&dSimpleLinks&8] &fRunning &fLinksPlugin &av" + version);
             } else {
                 System.out.println("Running SimpleLinks v" + version);
             }
